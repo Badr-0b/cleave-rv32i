@@ -1,5 +1,3 @@
-# Cleave: RV32I Single-Cycle Core on SkyWater 130 nm
-
 **Cleave** is a from-scratch **RV32I** single-cycle processor core, written in Verilog and hardened
 all the way to a DRC/LVS-clean **sky130** GDSII through an open-source ASIC flow. It is packaged as a
 [TinyTapeout](https://tinytapeout.com/)-style project (`tt_um_cleave`) targeting a single 1×1 tile.
@@ -14,7 +12,8 @@ There is no fabrication or tapeout submission.
 <!-- ▼▼▼ SCREENSHOT 1: hardened die / floorplan with dimensions ▼▼▼
      Drop the image in docs/ (e.g. docs/asic-dimensions.png) and update the path below. -->
 
-![Cleave hardened die, dimensions](docs/asic-dimensions.png)
+<img width="1217" height="909" alt="image" src="https://github.com/user-attachments/assets/dd8a8238-c99f-4bb6-84c9-9cf245d0d8fe" />
+
 
 <!-- ▲▲▲ SCREENSHOT 1 ▲▲▲ -->
 
@@ -25,7 +24,8 @@ There is no fabrication or tapeout submission.
 <!-- ▼▼▼ SCREENSHOT 2: 3D render of the QFN32 shell model ▼▼▼
      Render docs/Shell_Model/tt_um_cleave-QFN32.obj and save the shot as e.g. docs/shell-3d.png. -->
 
-![Cleave QFN32 package, 3D model](docs/shell-3d.png)
+<img width="678" height="478" alt="image" src="https://github.com/user-attachments/assets/3bdf2397-974c-436a-9f78-ff3108705ca4" />
+
 
 <!-- ▲▲▲ SCREENSHOT 2 ▲▲▲ -->
 

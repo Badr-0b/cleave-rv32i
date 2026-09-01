@@ -1,0 +1,37 @@
+# Exported by three-d-stage
+newmtl epoxy_body
+Kd 0.0242 0.0252 0.0296
+Ks 0.2000 0.2000 0.2000
+Ns 90
+d 1.0000
+
+newmtl epoxy_top
+Kd 1.0000 1.0000 1.0000
+Ks 0.2000 0.2000 0.2000
+Ns 100
+d 1.0000
+
+newmtl lead_tin
+Kd 0.6795 0.7084 0.7454
+Ks 0.2000 0.2000 0.2000
+Ns 140
+d 1.0000
+
+newmtl thermal_pad
+Kd 0.5841 0.6172 0.6584
+Ks 0.2000 0.2000 0.2000
+Ns 130
+d 1.0000
+
+newmtl silicon_die
+Kd 0.0423 0.0685 0.1470
+Ks 0.2000 0.2000 0.2000
+Ns 120
+d 1.0000
+
+newmtl pin1_mark
+Kd 0.8879 0.8963 0.9131
+Ks 0.2000 0.2000 0.2000
+Ns 120
+d 1.0000
+

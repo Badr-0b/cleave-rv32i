@@ -14,7 +14,7 @@ There is no fabrication or tapeout submission.
 <!-- ▼▼▼ SCREENSHOT 1: hardened die / floorplan with dimensions ▼▼▼
      Drop the image in docs/ (e.g. docs/asic-dimensions.png) and update the path below. -->
 
-![Cleave hardened die, dimensions](docs/asic-dimensions.png)
+
 
 <!-- ▲▲▲ SCREENSHOT 1 ▲▲▲ -->
 
@@ -25,7 +25,7 @@ There is no fabrication or tapeout submission.
 <!-- ▼▼▼ SCREENSHOT 2: 3D render of the QFN32 shell model ▼▼▼
      Render docs/Shell_Model/tt_um_cleave-QFN32.obj and save the shot as e.g. docs/shell-3d.png. -->
 
-![Cleave QFN32 package, 3D model](docs/shell-3d.png)
+
 
 <!-- ▲▲▲ SCREENSHOT 2 ▲▲▲ -->
 

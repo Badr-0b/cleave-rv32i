@@ -88,6 +88,13 @@ powershell -File ttsky-verilog-template/test/unit/run_unit_tests.ps1
 The suite currently passes **10/10** (9 module benches plus the integration proof). Waveforms can be
 inspected in GTKWave.
 
+<!-- ▼▼▼ SCREENSHOT 3: GTKWave waveform of the proof simulation ▼▼▼
+     Drop the image in docs/ (e.g. docs/waveform-sim.png) and update the path below. -->
+
+![Cleave proof simulation, GTKWave waveform](docs/waveform-sim.png)
+
+<!-- ▲▲▲ SCREENSHOT 3 ▲▲▲ -->
+
 ## Backend flow
 
 RTL is hardened against the open-source **SkyWater sky130A** PDK using an open EDA stack. Yosys runs

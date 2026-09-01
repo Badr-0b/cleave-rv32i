@@ -1,0 +1,4 @@
+# Icarus Verilog build artifacts from run_unit_tests.ps1
+build/
+*.vvp
+*.vcd

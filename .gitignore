@@ -1,0 +1,45 @@
+# ── Personal / tooling ───────────────────────────────────────────────
+.claude/
+.env
+personalnotes.md
+.DS_Store
+.idea/
+
+# ── Simulation / waveforms ───────────────────────────────────────────
+*.vcd
+*.fst
+*.fst.hier
+*.vvp
+*.gtkw
+
+# ── TinyTapeout template locals (from ttsky-verilog-template/.gitignore)
+ttsky-verilog-template/docs/qflow-*.md
+ttsky-verilog-template/runs/
+ttsky-verilog-template/tt_submission/
+ttsky-verilog-template/src/user_config.json
+ttsky-verilog-template/src/config_merged.json
+ttsky-verilog-template/test/sim_build/
+ttsky-verilog-template/test/__pycache__/
+ttsky-verilog-template/test/results.xml
+ttsky-verilog-template/test/gate_level_netlist.v
+
+# ── OpenLane / qflow build tree under cleave/ ────────────────────────
+# Keep: the final GDS, run logs, the qflow archive, configs/scripts.
+# Drop: the multi-GB OpenLane run tree + all P&R intermediates.
+cleave/runs/
+cleave/synthesis/
+cleave/**/*.cel
+cleave/**/*.cel.bak
+cleave/**/*.def
+cleave/**/*.spc
+cleave/**/*.xspice
+cleave/**/*.pin
+cleave/**/*.pl1
+cleave/**/*.pl2
+cleave/**/*.obs
+cleave/**/fillcells.txt
+
+# In cleave/layout/, keep only the signed-off GDS
+cleave/layout/*
+!cleave/layout/
+!cleave/layout/tt_um_cleave.gds

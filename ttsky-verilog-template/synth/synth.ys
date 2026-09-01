@@ -1,0 +1,32 @@
+# Cleave RV32I — sky130 (sky130_fd_sc_hd) synthesis script.
+# Top = tt_um_cleave (the full TinyTapeout macro that gets hardened in the backend).
+# Run from ttsky-verilog-template/ :
+#   "C:/Users/Nitro/Desktop/ASIC/oss-cad-suite/bin/yosys.exe" -s synth/synth.ys
+# Output: synth/cleave.synth.v (sky130 hd gate-level netlist) — hand off to qflow/OpenROAD.
+#
+# NOTE: read WITHOUT -DSIMULATION so the `ifdef SIMULATION` zero-init / assert blocks
+# in cleave_regfile / cleave_dmem / cleave_core are excluded from the hardware.
+
+read_verilog src/tt_um_cleave.v src/cleave_core.v src/cleave_pc.v src/cleave_imem.v \
+             src/cleave_regfile.v src/cleave_alu.v src/cleave_immgen.v \
+             src/cleave_branch.v src/cleave_control.v src/cleave_dmem.v
+
+hierarchy -check -top tt_um_cleave
+
+# Generic synthesis + flatten to one module for the backend.
+synth -top tt_um_cleave -flatten
+
+# Hard requirement for this design: no inferred latches (all state is edge-flops).
+select -assert-none t:$dlatch t:$_DLATCH_P_ t:$_DLATCH_N_
+
+# Map to sky130 hd standard cells.
+dfflibmap -liberty C:/Users/Nitro/Desktop/ASIC/PDK/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc       -liberty C:/Users/Nitro/Desktop/ASIC/PDK/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+opt_clean -purge
+setundef -zero
+
+check
+stat -liberty C:/Users/Nitro/Desktop/ASIC/PDK/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+write_verilog -noattr synth/cleave.synth.v

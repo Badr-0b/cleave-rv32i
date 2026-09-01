@@ -93,7 +93,8 @@ inspected in GTKWave.
 <!-- ▼▼▼ SCREENSHOT 3: GTKWave waveform of the proof simulation ▼▼▼
      Drop the image in docs/ (e.g. docs/waveform-sim.png) and update the path below. -->
 
-![Cleave proof simulation, GTKWave waveform](docs/waveform-sim.png)
+<img width="1594" height="943" alt="image" src="https://github.com/user-attachments/assets/1b6c9f32-b738-45cd-bf7a-7756f0ae26b3" />
+
 
 <!-- ▲▲▲ SCREENSHOT 3 ▲▲▲ -->
 

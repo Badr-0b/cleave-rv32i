@@ -377,6 +377,7 @@ pipelining.
 | 9 | `docker` unavailable in WSL | Docker Desktop daemon off, then WSL integration disabled | Launch Docker Desktop; enable Ubuntu WSL integration in `settings-store.json`; restart |
 | 10 | LibreLane: `cannot attach stdin to a TTY-enabled container` | `--docker-no-tty` placed *after* `--dockerized` (ignored) | Put `--docker-no-tty` **before** `--dockerized` |
 | 11 | 2,765 setup violations @40 ns | single-cycle long path fails setup in the ss slow corner | Optional: loosen clock (~80–150 ns) or pipeline; not required for the deliverable |
+| 12 | GitHub Desktop "Commit failed / nothing added" | `ttsky-verilog-template/` was a nested git repo + 2.85 GB staged into the index | De-nest (remove inner `.git`, backed up) + real `.gitignore` + `git rm --cached` the bulk (§11) |
 
 ---
 
@@ -406,6 +407,24 @@ pipelining.
 | qflow setup/logs | `Projects\cleave\qflow_vars.sh`, `project_vars.sh`, `log\`, `synthesis\` |
 | Interim handoff (superseded) | repo root `HANDOFF_QFLOW_SESSION.md` |
 | **This document** | `ttsky-verilog-template\docs\SESSION_WRITEUP_2026-09-01_qflow-to-openlane.md` |
+
+### Repository (git) state — cleaned up at end of session
+
+The repo `github.com/Badr-0b/RISC-V-CORE-SKY130nm` had two problems that blocked a GitHub Desktop
+commit; both are fixed:
+
+- **`ttsky-verilog-template/` was a nested git repo** (its own `.git`, wired to TinyTapeout's
+  upstream), so the outer repo saw it as an opaque embedded repo and refused to commit its contents.
+  **Fixed by de-nesting** — the inner `.git` was removed (backed up to
+  `C:\Users\Nitro\Documents\ttsky-template-git-backup-2026-09-01.tar.gz`) so all the RTL/docs/tests
+  are now normal files in the outer repo.
+- **~2.85 GB of OpenLane `runs/` intermediates had been `git add`-ed** into the index. They were
+  unstaged (`git rm -r --cached`) and a real `.gitignore` now excludes `cleave/runs/`,
+  `cleave/synthesis/`, and all P&R intermediates, while **keeping** the final GDS, run logs, the
+  qflow archive, and configs. Net commit set: **~76 files / ~40 MB** (largest = the 33 MB GDS).
+
+The `cleave/runs/` folder (~2 GB, gitignored) is a duplicate of the OpenLane build and is safe to
+delete locally to reclaim space — the canonical outputs live in `ASIC\Projects\cleave`.
 
 ---
 
@@ -443,10 +462,50 @@ qflow synthesize place tt_um_cleave` works; `qflow route` will not converge (§6
 - **qflow:** documented dead-end for a ~22 k-cell block — keep OpenLane as the backend for Cleave.
 - **OpenSTA:** no longer needed as a standalone (OpenLane runs multi-corner STA internally); the
   `~/OpenSTA` clone can be deleted.
+- **Repo:** de-nested and cleaned (§11); commit + push from GitHub Desktop. If ever revisiting a TT
+  submission, restore the template git from the backup tarball rather than re-nesting.
 
 ---
 
-## 14. Appendix
+## 14. Packaging estimate (for a 3D model, "for looks")
+
+Not fabricated — this is a plausible package for a hypothetical part, sized to the real interface
+and die.
+
+**Pin count — from the `tt_um_cleave` ports (standard TinyTapeout interface):**
+
+| Group | Width | Physical pins |
+|---|---|---|
+| `ui_in` — dedicated inputs | [7:0] | 8 in |
+| `uo_out` — dedicated **outputs** | [7:0] | 8 out |
+| `uio` — bidirectional I/O (`_in`/`_out`/`_oe` are internal) | [7:0] | 8 bidir |
+| `clk`, `rst_n`, `ena` | — | 3 in |
+
+**27 signal pins** (8 of them dedicated outputs; in this build the 8 `uio` are tied off as inputs).
+A standalone chip adds power/ground (a TT tile normally gets those from the frame): ~2× VDD + 2× VSS
+→ **~31 pins → a 32-pin package.**
+
+**Die:** 647 × 658 µm (≈ 0.43 mm², ~0.65 mm/side) — genuinely tiny; normal for ~24 k cells on
+130 nm. The package size is set by pin count and handling, not the die.
+
+**Package: QFN-32, 5 × 5 mm, 0.5 mm pitch** (JEDEC MO-220) — the natural fit. Model dimensions:
+
+| Feature | Dimension |
+|---|---|
+| Body (L × W × H) | 5.00 × 5.00 × 0.85 mm |
+| Leads | 8 per side × 4 = 32; 0.50 mm pitch; each pad ≈ 0.40 × 0.25 mm, castellated (flush, no legs) |
+| Exposed thermal pad (bottom center) | ≈ 3.10 × 3.10 mm |
+| Pin-1 marker | dot / corner bevel on the top face |
+| Die inside | ≈ 0.65 × 0.65 × 0.28 mm on the die pad (mostly empty package around it) |
+
+Smaller alternatives if desired: **QFN-28 (5×5)** or **QFN-24 (4×4 mm)** — drop `ena` and a couple
+of the unused `uio` from the visible pinout. (A DIP/SOIC reads more obviously as "a chip" to a
+layperson but is less true to a modern sky130 part; QFN is the honest pick.) Note for the mesh:
+QFN leads are flush castellations — gull-wing legs would make it a QFP.
+
+---
+
+## 15. Appendix
 
 ### Tool versions
 qflow 1.4.104 · yosys 0.33 (2584903) · magic 8.3.620 · netgen · qrouter 1.4.90 · graywolf ·

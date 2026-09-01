@@ -5,6 +5,20 @@ personalnotes.md
 .DS_Store
 .idea/
 
+# ── Personal / AI-collaboration docs (kept locally, never committed) ──
+# Handoffs, session writeups, runbooks, internal trackers, scratch notes.
+# Filename patterns (no leading slash) so they match at the root and in
+# ttsky-verilog-template/ alike. None are needed to build or test.
+HANDOFF*.md
+WHATS_NEXT.md
+SESSION_WRITEUP*.md
+PROJECT_STAGES.md
+Project_tree.md
+*runbook*.md
+
+# ── Heavy working backups (regenerable snapshots) ────────────────────
+cleave/archive_qflow_*.tar.gz
+
 # ── Simulation / waveforms ───────────────────────────────────────────
 *.vcd
 *.fst

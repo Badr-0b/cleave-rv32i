@@ -1,0 +1,12 @@
+{
+  "DESIGN_NAME": "tt_um_cleave",
+  "VERILOG_FILES": "dir::source/*.v",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 40,
+  "FP_SIZING": "relative",
+  "FP_CORE_UTIL": 40,
+  "PL_TARGET_DENSITY_PCT": 45,
+  "GRT_ALLOW_CONGESTION": true,
+  "RUN_LINTER": false,
+  "PDK": "sky130A"
+}

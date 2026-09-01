@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/runs/RUN_2026-09-01_13-22-07/10-openroad-dumprcvalues/or_metrics_out.json /nix/store/pyjad0nmv834qyrz9qicmvljgxnyd00p-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/openroad/dump_rc.tcl

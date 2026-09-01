@@ -1,0 +1,206 @@
+START re-place+route+chain (density 0.30) Tue Sep  1 14:31:10 +03 2026
+=== qflow place Tue Sep  1 14:31:10 +03 2026 ===
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to sky130_fd_sc_hd from existing qflow_vars.sh file
+Regenerating files for existing project tt_um_cleave
+Qrouter detail maze router version 1.4.90.T
+Reading LEF data from file /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+LEF file:  Defines site unithd (ignored)
+LEF file:  Defines site unithddbl (ignored)
+LEF Read, Line 83: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF Read, Line 116: Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF Read, Line 119: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF Read, Line 125: Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF Read, Line 126: Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF Read, Line 127: Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF Read, Line 160: Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF Read, Line 169: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF Read, Line 171: Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF Read, Line 172: Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF Read, Line 173: Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF Read, Line 211: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF Read, Line 213: Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF Read, Line 214: Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF Read, Line 215: Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF Read, Line 253: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF Read, Line 255: Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF Read, Line 256: Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF Read, Line 257: Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF Read, Line 295: Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+LEF Read: encountered 0 errors and 20 warnings total.
+Horizontal route layer at non-minimum pitch 0.68.  Using smaller pitch 0.34, will route on 1-of-2 tracks for layer met3.
+Vertical route layer at non-minimum pitch 0.92.  Using smaller pitch 0.46, will route on 1-of-2 tracks for layer met4.
+Vertical route layer at non-minimum pitch 0.92.  Using smaller pitch 0.46, will route on 1-of-2 tracks for layer met5.
+Horizontal route layer at non-minimum pitch 3.4.  Using smaller pitch 0.34, will route on 1-of-10 tracks for layer met5.
+Restoring tt_um_cleave.rtl.v, tt_um_cleave.rtlnopwr.v, and tt_um_cleave.rtlbb.v from pre-placement backups
+Running vlog2Cel to generate input files for graywolf
+vlog2Cel -l /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -l  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef -u 200 -o /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/layout/tt_um_cleave.cel /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.rtlnopwr.v
+No tt_um_cleave.cel1 file found for project. . . no partial blockages to apply to layout.
+Running decongest to set initial density of 0.30
+decongest.tcl tt_um_cleave  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef sky130_fd_sc_hd__fill_,sky130_fd_sc_hd__decap_,sky130_fd_sc_hd__diode_,sky130_fd_sc_hd__tapvpwrvgnd_ 0.30 0,70,10,20 --units=200 --lib=/home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+Reading sky130_fd_sc_hd__fill_ sky130_fd_sc_hd__decap_ sky130_fd_sc_hd__diode_ sky130_fd_sc_hd__tapvpwrvgnd_ macros from LEF file.
+Unexpected input in LEF file:  Only macro defs were expected!
+Line is:   NOWIREEXTENSIONATPIN ON ;
+decongest.tcl:
+Fixed density planning, density = 0.30
+Number of cells = 22650, total width = 12056876
+Width of fill = 0
+Width of decap = 19692897
+Width of antenna = 2813271
+Width of body ties = 5626542
+
+Done!
+No tt_um_cleave.cel2 file found for project. . . continuing without pin placement hints
+Running GrayWolf placement
+graywolf -n tt_um_cleave
+Running getantennacell to determine cell to use for antenna anchors.
+getantennacell.tcl tt_um_cleave  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef sky130_fd_sc_hd__diode_
+Unexpected input in LEF file:  Only macro defs were expected!
+Using cell sky130_fd_sc_hd__diode_2 for antenna anchors
+Running getfillcell to determine cell to use for fill.
+getfillcell.tcl tt_um_cleave  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef sky130_fd_sc_hd__fill_
+Unexpected input in LEF file:  Only macro defs were expected!
+Warning:  No fill cells correspond to cell width in the .par file.
+Using smallest matching fill macro sky130_fd_sc_hd__fill_1
+Using cell sky130_fd_sc_hd__fill_1 for fill
+Running place2def to translate graywolf output to DEF format.
+place2def.tcl tt_um_cleave sky130_fd_sc_hd__fill_1 5 antennapin=vpb antennacell=sky130_fd_sc_hd__diode_
+Running addspacers to generate power stripes and align cell right edge
+addspacers -stripe 2.5 50.0 PG  -p VPWR,VPB -g VGND,VNB -f sky130_fd_sc_hd__fill_ -O  -l /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -l  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef -o tt_um_cleave_filled.def tt_um_cleave
+Running arrangepins to adjust pin positions for optimal routing.
+arrangepins.tcl  tt_um_cleave
+Reading info file tt_um_cleave.info. . .
+Reading DEF file tt_um_cleave.def. . .
+Recalculating pin positions
+Writing DEF file tt_um_cleave_mod.def. . .
+Done with arrangepins.tcl
+DEF2Verilog -v /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.rtlnopwr.v -o /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave_anno.v
+-p VPWR,VPB -g VGND,VNB -l /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -l  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef tt_um_cleave.def
+Generating RTL verilog and SPICE netlist file in directory
+   /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis
+Files:
+   Verilog: /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.rtl.v
+   Verilog: /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.rtlnopwr.v
+   Verilog: /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.rtlbb.v
+   Spice:   /mnt/c/Users/Nitro/Desktop/ASIC/Projects/cleave/synthesis/tt_um_cleave.spc
+Copying tt_um_cleave.rtl.v, tt_um_cleave.rtlnopwr.v, and tt_um_cleave.rtlbb.v to backups
+Running vlog2Verilog.
+vlog2Verilog -c -v VPWR,VPB -g VGND,VNB -o tt_um_cleave.rtl.v tt_um_cleave_anno.v
+vlog2Verilog -c -p -v VPWR,VPB -g VGND,VNB -o tt_um_cleave.rtlnopwr.v tt_um_cleave_anno.v
+vlog2Verilog -c -b -p -n -v VPWR,VPB -g VGND,VNB -o tt_um_cleave.rtlbb.v tt_um_cleave_anno.v
+Running vlog2Spice.
+vlog2Spice -i -l  /home/nitro/work/open_pdks/open_pdks/root/volare/sky130/build/c6d73a35f524070e85faff4a6a9eef49553ebc2b/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice -o tt_um_cleave.spc tt_um_cleave.rtl.v
+PLACE_EXIT=0 Tue Sep  1 15:46:15 +03 2026
+=== qflow route Tue Sep  1 15:46:15 +03 2026 ===
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to sky130_fd_sc_hd from existing qflow_vars.sh file
+Regenerating files for existing project tt_um_cleave
+Running qrouter 1.4.90.T
+qrouter -nog  -s tt_um_cleave.cfg
+*** Running stage1 routing with defaults
+Nets remaining: 22600
+Nets remaining: 22500
+Nets remaining: 22400
+Nets remaining: 22300
+Nets remaining: 22200
+Nets remaining: 22100
+Nets remaining: 22000
+Nets remaining: 21900
+Nets remaining: 21800
+Nets remaining: 21700
+Nets remaining: 21600
+Nets remaining: 21500
+Nets remaining: 21400
+Nets remaining: 21300
+Nets remaining: 21200
+Nets remaining: 21100
+Nets remaining: 21000
+Nets remaining: 20900
+Nets remaining: 20800
+Nets remaining: 20700
+Nets remaining: 20600
+Nets remaining: 20500
+Nets remaining: 20400
+Nets remaining: 20300
+Nets remaining: 20200
+Nets remaining: 20100
+Nets remaining: 20000
+Nets remaining: 19900
+Nets remaining: 19800
+Nets remaining: 19700
+Nets remaining: 19600
+Nets remaining: 19500
+Nets remaining: 19400
+Nets remaining: 19300
+Nets remaining: 19200
+Nets remaining: 19100
+Nets remaining: 19000
+Nets remaining: 18900
+Nets remaining: 18800
+Nets remaining: 18700
+Nets remaining: 18600
+Nets remaining: 18500
+Nets remaining: 18400
+Nets remaining: 18300
+Nets remaining: 18200
+Nets remaining: 18100
+Nets remaining: 18000
+Nets remaining: 17900
+Nets remaining: 17800
+Nets remaining: 17700
+Nets remaining: 17600
+Nets remaining: 17500
+Nets remaining: 17400
+Nets remaining: 17300
+Nets remaining: 17200
+Nets remaining: 17100
+Nets remaining: 17000
+Nets remaining: 16900
+Nets remaining: 16800
+Nets remaining: 16700
+Nets remaining: 16600
+Nets remaining: 16500
+Nets remaining: 16400
+Nets remaining: 16300
+Nets remaining: 16200
+Nets remaining: 16100
+Nets remaining: 16000
+Nets remaining: 15900Killed
+ROUTE_EXIT=1 Tue Sep  1 15:54:25 +03 2026
+NO ROUTED DEF — route did not converge Tue Sep  1 15:54:25 +03 2026
+=== SUMMARY Tue Sep  1 15:54:25 +03 2026 ===
+ls: cannot access 'layout/tt_um_cleave_route.def': No such file or directory
+ls: cannot access 'layout/tt_um_cleave.gds': No such file or directory
+Nets remaining: 15800
+Nets remaining: 15700
+Nets remaining: 15600
+Nets remaining: 15500
+Nets remaining: 15400
+Nets remaining: 15300
+Nets remaining: 15200
+Nets remaining: 15100
+Nets remaining: 15000
+Nets remaining: 14900
+Nets remaining: 14800
+Nets remaining: 14700
+Nets remaining: 14600
+Nets remaining: 14500
+Nets remaining: 14400
+Nets remaining: 14300
+Nets remaining: 14200
+Nets remaining: 14100
+
+Nets remaining: 14020
+Finished routing net _5308_
+Nets remaining: 14019
+grep: log/lvs.log: No such file or directory
+CHAIN_DONE Tue Sep  1 15:54:25 +03 2026

@@ -1,0 +1,8 @@
+qrouter 1.4.90.T
+units scale 200
+li1 0.46 0.23 0.17 vertical
+met1 0.34 0.17 0.14 horizontal
+met2 0.46 0.23 0.14 vertical
+met3 0.34 0.34 0.3 horizontal 2
+met4 0.46 0.46 0.3 vertical 2
+met5 0.34 1.7 1.6 horizontal 10

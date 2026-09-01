@@ -1,0 +1,297 @@
+START route+chain Tue Sep  1 12:55:18 +03 2026
+=== qflow route Tue Sep  1 12:55:18 +03 2026 ===
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to sky130_fd_sc_hd from existing qflow_vars.sh file
+Regenerating files for existing project tt_um_cleave
+Running qrouter 1.4.90.T
+qrouter -nog  -s tt_um_cleave.cfg
+*** Running stage1 routing with defaults
+Nets remaining: 22600
+Nets remaining: 22500
+Nets remaining: 22400
+Nets remaining: 22300
+Nets remaining: 22200
+Nets remaining: 22100
+Nets remaining: 22000
+Nets remaining: 21900
+Nets remaining: 21800
+Nets remaining: 21700
+Nets remaining: 21600
+Nets remaining: 21500
+Nets remaining: 21400
+Nets remaining: 21300
+Nets remaining: 21200
+Nets remaining: 21100
+Nets remaining: 21000
+Nets remaining: 20900
+Nets remaining: 20800
+Nets remaining: 20700
+Nets remaining: 20600
+Nets remaining: 20500
+Nets remaining: 20400
+Nets remaining: 20300
+Nets remaining: 20200
+Nets remaining: 20100
+Nets remaining: 20000
+Nets remaining: 19900
+Nets remaining: 19800
+Nets remaining: 19700
+Nets remaining: 19600
+Nets remaining: 19500
+Nets remaining: 19400
+Nets remaining: 19300
+Nets remaining: 19200
+Nets remaining: 19100
+Nets remaining: 19000
+Nets remaining: 18900
+Nets remaining: 18800
+Nets remaining: 18700
+Nets remaining: 18600
+Nets remaining: 18500
+Nets remaining: 18400
+Nets remaining: 18300
+Nets remaining: 18200
+Nets remaining: 18100
+Nets remaining: 18000
+Nets remaining: 17900
+Nets remaining: 17800
+Nets remaining: 17700
+Nets remaining: 17600
+Nets remaining: 17500
+Nets remaining: 17400
+Nets remaining: 17300
+Nets remaining: 17200
+Nets remaining: 17100
+Nets remaining: 17000
+Nets remaining: 16900
+Nets remaining: 16800
+Nets remaining: 16700
+Nets remaining: 16600
+Nets remaining: 16500
+Nets remaining: 16400
+Nets remaining: 16300
+Nets remaining: 16200
+Nets remaining: 16100
+Nets remaining: 16000
+Nets remaining: 15900
+Nets remaining: 15800
+Nets remaining: 15700
+Nets remaining: 15600
+Nets remaining: 15500
+Nets remaining: 15400
+Nets remaining: 15300
+Nets remaining: 15200
+Nets remaining: 15100
+Nets remaining: 15000
+Nets remaining: 14900
+Nets remaining: 14800
+Nets remaining: 14700
+Nets remaining: 14600
+Nets remaining: 14500
+Nets remaining: 14400
+Nets remaining: 14300
+Nets remaining: 14200
+Nets remaining: 14100
+Nets remaining: 14000
+Nets remaining: 13900
+Nets remaining: 13800
+Nets remaining: 13700
+Nets remaining: 13600
+Nets remaining: 13500
+Nets remaining: 13400
+Nets remaining: 13300
+Nets remaining: 13200
+Nets remaining: 13100
+Nets remaining: 13000
+Nets remaining: 12900
+Nets remaining: 12800
+Nets remaining: 12700
+Nets remaining: 12600
+Nets remaining: 12500
+Nets remaining: 12400
+Nets remaining: 12300
+Nets remaining: 12200
+Nets remaining: 12100
+Nets remaining: 12000
+Nets remaining: 11900
+Nets remaining: 11800
+Nets remaining: 11700
+Nets remaining: 11600
+Nets remaining: 11500
+Nets remaining: 11400
+Nets remaining: 11300
+Nets remaining: 11200
+Nets remaining: 11100
+Nets remaining: 11000
+Nets remaining: 10900
+Nets remaining: 10800
+Nets remaining: 10700
+Nets remaining: 10600
+Nets remaining: 10500
+Nets remaining: 10400
+Nets remaining: 10300
+Nets remaining: 10200
+Nets remaining: 10100
+Nets remaining: 10000
+Nets remaining: 9900
+Nets remaining: 9800
+Nets remaining: 9700
+Nets remaining: 9600
+Nets remaining: 9500
+Nets remaining: 9400
+Nets remaining: 9300
+Nets remaining: 9200
+Nets remaining: 9100
+Nets remaining: 9000
+Nets remaining: 8900
+Nets remaining: 8800
+Nets remaining: 8700
+Nets remaining: 8600
+Nets remaining: 8500
+Nets remaining: 8400
+Nets remaining: 8300
+Nets remaining: 8200
+Nets remaining: 8100
+Nets remaining: 8000
+Nets remaining: 7900
+Nets remaining: 7800
+Nets remaining: 7700
+Nets remaining: 7600
+Nets remaining: 7500
+Nets remaining: 7400
+Nets remaining: 7300
+Nets remaining: 7200
+Nets remaining: 7100
+Nets remaining: 7000
+Nets remaining: 6900
+Nets remaining: 6800
+Nets remaining: 6700
+Nets remaining: 6600
+Progress: Stage 1 total routes completed: 46332
+Failed net routes: 6606
+*** Running stage2 routing with options mask 10, effort 10
+Nets remaining: 6600
+Nets remaining: 6500
+Nets remaining: 6500
+Nets remaining: 6400
+Nets remaining: 6300
+Nets remaining: 6200
+Nets remaining: 6200
+Nets remaining: 6100
+Nets remaining: 6000
+Nets remaining: 5900
+Nets remaining: 5900
+Nets remaining: 5800
+Nets remaining: 5700
+Progress: Stage 2 total routes completed: 46673
+Failed net routes: 6598
+*** Running stage2 routing with options mask 20, effort 10
+Nets remaining: 6500
+Nets remaining: 6500
+Nets remaining: 6500
+Progress: Stage 2 total routes completed: 46926
+Failed net routes: 6485
+*** Running stage2 routing with options mask 30, effort 10
+Nets remaining: 6400
+Nets remaining: 6400
+Nets remaining: 6300
+Nets remaining: 6200
+Progress: Stage 2 total routes completed: 47542
+Failed net routes: 6150
+*** Running stage2 routing with options mask 40, effort 10
+Nets remaining: 6100
+Nets remaining: 6000
+Nets remaining: 5900
+Nets remaining: 5800
+Nets remaining: 5700
+Nets remaining: 5600
+Nets remaining: 5500
+Nets remaining: 5400
+Nets remaining: 5300
+Nets remaining: 5200
+Nets remaining: 5100
+Nets remaining: 5000
+Nets remaining: 4900
+Nets remaining: 4800
+Nets remaining: 4700
+Nets remaining: 4600
+Nets remaining: 4500
+Nets remaining: 4400
+Nets remaining: 4300
+Nets remaining: 4200
+Nets remaining: 4200
+Nets remaining: 4100
+Nets remaining: 4000
+Nets remaining: 4000
+Nets remaining: 3900
+Nets remaining: 3800
+Nets remaining: 3700
+Nets remaining: 3600
+Nets remaining: 3500
+Nets remaining: 3400
+Nets remaining: 3300
+Nets remaining: 3300
+Nets remaining: 3300
+Nets remaining: 3300
+Nets remaining: 3200
+Nets remaining: 3200
+Nets remaining: 3100
+Nets remaining: 3100
+Nets remaining: 3100
+Nets remaining: 3100
+Progress: Stage 2 total routes completed: 49458
+Failed net routes: 5433
+*** Running stage2 routing with options mask 50, effort 10
+Nets remaining: 5400
+Nets remaining: 5400
+Nets remaining: 5300
+Nets remaining: 5200
+Nets remaining: 5200
+Nets remaining: 5200
+Nets remaining: 5200
+Nets remaining: 5100
+Nets remaining: 5000
+Nets remaining: 4900
+Nets remaining: 4800
+Nets remaining: 4700
+Nets remaining: 4600
+Nets remaining: 4500
+Nets remaining: 4400
+Nets remaining: 4300
+Nets remaining: 4200
+Nets remaining: 4100
+Progress: Stage 2 total routes completed: 52517
+Failed net routes: 5110
+*** Running stage2 routing with options mask 60, effort 10
+Nets remaining: 5100
+Nets remaining: 5100
+Nets remaining: 5000
+Nets remaining: 5000
+Progress: Stage 2 total routes completed: 53473
+Failed net routes: 4989
+*** Running stage2 routing with options mask 70, effort 10
+Progress: Stage 2 total routes completed: 54343
+Failed net routes: 4930
+*** Running stage2 routing with options mask 80, effort 10
+Progress: Stage 2 total routes completed: 54516
+Failed net routes: 4924
+*** Running stage2 routing with options mask 90, effort 10
+Progress: Stage 2 total routes completed: 54688
+Failed net routes: 4918
+*** Running stage2 routing with options mask 100, effort 10
+Nets remaining: 4900
+Nets remaining: 4900
+Nets remaining: 4900
+Progress: SKilled
+ROUTE_EXIT=1 Tue Sep  1 14:30:25 +03 2026
+NO ROUTED DEF — stopping before migrate/gdsii/lvs Tue Sep  1 14:30:25 +03 2026
+=== SUMMARY Tue Sep  1 14:30:25 +03 2026 ===
+ls: cannot access 'layout/tt_um_cleave_route.def': No such file or directory
+ls: cannot access 'layout/tt_um_cleave.gds': No such file or directory
+grep: log/drc.log: No such file or directory
+grep: log/lvs.log: No such file or directory
+CHAIN_DONE Tue Sep  1 14:30:26 +03 2026

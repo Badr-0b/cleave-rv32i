@@ -1,5 +1,3 @@
-<img width="678" height="478" alt="image" src="https://github.com/user-attachments/assets/f83f5601-e3e1-485c-9b5f-c2688fa3b047" /># Cleave: RV32I Single-Cycle Core on SkyWater 130 nm
-
 **Cleave** is a from-scratch **RV32I** single-cycle processor core, written in Verilog and hardened
 all the way to a DRC/LVS-clean **sky130** GDSII through an open-source ASIC flow. It is packaged as a
 [TinyTapeout](https://tinytapeout.com/)-style project (`tt_um_cleave`) targeting a single 1×1 tile.

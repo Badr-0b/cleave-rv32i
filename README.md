@@ -74,7 +74,7 @@ cleave-rv32i/
 
 ## Verification
 
-Every module has a persisted, self-checking [Icarus Verilog](http://iverilog.icarus.com/) bench in
+Every module has a persisted, self-checking [Icarus Verilog](https://github.com/steveicarus/iverilog) bench in
 `ttsky-verilog-template/test/unit/`, plus a full-core integration "proof" program
 (`tb_cleave_proof.v`). The proof exercises every instruction group: LUI/AUIPC, R/I ALU ops
 (including shifts and SLT), the SB/SH/SW to LB/LH/LW/LBU/LHU round-trip, each branch condition, and
